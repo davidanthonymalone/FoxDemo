@@ -15,6 +15,8 @@ class UsersController < ApplicationController
      if @user.save
         flash[:success] = "Welcome to the Twitter App!" 
         redirect_to @user 
+                          remember @user           # NEW LINE
+
      else
         render 'new' 
      end
